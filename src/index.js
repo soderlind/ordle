@@ -138,7 +138,7 @@ ${matrix
           />
         </svg>
         <span>Ordle 🇳🇴</span>
-        <a href="https://github.com/ordle/ordle.github.io" title="Github">
+        <a href="https://github.com/soderlind/ordle" title="Github">
           <svg role="img" viewBox="0 0 512 512">
             <rect width="512" height="512" rx="15%" fill="#fff" />
             <path
