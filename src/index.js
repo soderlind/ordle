@@ -221,7 +221,7 @@ ${matrix
 }
 
 function Keyboard({ onInput, onSubmit, guesses, isDone, matrix }) {
-  const keys = `qwertyuiopåasdfghjkløæ⌫zxcvbnm⏎`.split("");
+  const keys = `qwertyuiopåasdfghjkløæ⏎zxcvbnm⌫`.split("");
   const classByKey = matrix
     .slice(0, guesses.length - 1)
     .reduce((acc, { guess, states = [] }) => {
