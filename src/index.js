@@ -196,9 +196,9 @@ ${matrix
           Ordle: Gjett ordet!
           <br />
           <br />
-          🟩 = Riktig bokstav på rett plass i ordet.
+          🟩 = Riktig bokstav, på rett plass i ordet.
           <br />
-          🟨 = Bokstaven finnes i ordet men er på feil plass.
+          🟨 = Bokstaven finnes i ordet, men er på feil plass.
           <br />
           Kun ett nytt ord pr dag. Greier du ikke å løse det? Prøv igjen i
           morgen.
