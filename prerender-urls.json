@@ -2,7 +2,7 @@
   {
     "url": "/",
     "title": "Ordle",
-    "ogImage": "/assets/og.jpg",
-    "twitterImage": "/assets/twitter.jpg"
+    "ogImage": "https://ordle.github.io/assets/og.jpg",
+    "twitterImage": "https://ordle.github.io/assets/twitter.jpg"
   }
 ]

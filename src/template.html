@@ -10,11 +10,18 @@
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="dark-content">
+	<link rel="apple-touch-icon" href="/assets/logo.png" />
+
 	<!-- Facebook -->
+	<meta property="og:title" content="Ordle" />
+	<meta property="og:description" content="Gjett ordet!" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://ordle.github.io/" />
 	<meta property="og:image" content="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.ogImage %>" />
 	<!-- Twitter -->
-	<meta property="twitter:image" content="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.twitterImage %>" />
-	<link rel="apple-touch-icon" href="/assets/logo.png" />
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Ordle: Gjett ordet!">
+	<meta name="twitter:image" content="<%= htmlWebpackPlugin.options.CLI_DATA.preRenderData.twitterImage %>" />
 	<% preact.headEnd %>
 </head>
 
