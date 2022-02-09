@@ -193,6 +193,17 @@ ${matrix
         onClick={() => setHelp(false)}
       >
         <p>
+          Ordle: Gjett ordet!
+          <br />
+          <br />
+          🟩 = Riktig bokstav på rett plass i ordet.
+          <br />
+          🟨 = Rikig bokstav på feil plass i ordet.
+          <br />
+          Kun ett nytt ord pr dag. Greier du ikke å løse det? Prøv igjen i
+          morgen.
+          <br />
+          <br />
           "Ordle" is a Norwegian fork of "Swordle" a{" "}
           <a href="https://www.powerlanguage.co.uk/wordle">Wordle</a> clone
           built by <a href="https://twitter.com/litenjacob">@litenjacob</a> to
@@ -203,10 +214,6 @@ ${matrix
           dependency. It also uses{" "}
           <a href="https://preactjs.com/cli/">preact-cli</a> to create a
           minimal, server-prerendered, offline-enabled build.
-          <br />
-          <br />
-          Kun ett nytt ord pr dag. Greir du ikke å løse det? Prøv igjen i
-          morgen.
         </p>
       </div>
     </label>
