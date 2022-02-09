@@ -198,7 +198,7 @@ ${matrix
           <br />
           🟩 = Riktig bokstav på rett plass i ordet.
           <br />
-          🟨 = Rikig bokstav på feil plass i ordet.
+          🟨 = Bokstaven finnes i ordet men er på feil plass.
           <br />
           Kun ett nytt ord pr dag. Greier du ikke å løse det? Prøv igjen i
           morgen.
