@@ -1,9 +1,14 @@
+import { render } from "preact";
 import { useState, useEffect, useRef } from "preact/hooks";
 import "./index.css";
 
 function useWords() {
   const [words, setWords] = useState([]);
-  useEffect(() => import("/words.json").then((m) => setWords(m.default)), []);
+  useEffect(() => {
+    fetch("/words.json")
+      .then((res) => res.json())
+      .then((data) => setWords(data));
+  }, []);
 
   const answerIndex = getAnswerIndex();
   return {
@@ -46,7 +51,7 @@ const getAnswerIndex = () =>
     (Date.now() - new Date(2022, 0, 23, 0, 0, 0).getTime()) / 86400e3
   ) % NUM_ANSWERS;
 
-export default function Game() {
+function Game() {
   const inputRef = useRef();
   const { answer, answerIndex, isGuessValid } = useWords();
   const [guesses, setGuesses] = useSavedGuesses(answer);
@@ -149,9 +154,10 @@ ${matrix
         </a>
       </header>
       <form onSubmit={onSubmit} class="guesses">
-        {matrix.map(({ guess, states, isActive, isSubmitted }) =>
+        {matrix.map(({ guess, states, isActive, isSubmitted }, guessIndex) =>
           states.map((state, letterIndex) => (
             <div
+              key={`${guessIndex}-${letterIndex}`}
               class={`letter ${
                 isSubmitted
                   ? `submitted ${state}`
@@ -211,9 +217,9 @@ ${matrix
           <a href="http://www.github.com/krawaller/swordle">~250 lines of JS</a>{" "}
           and equally little CSS, and has{" "}
           <a href="https://preactjs.com/">preact</a> as its <i>only</i> runtime
-          dependency. It also uses{" "}
-          <a href="https://preactjs.com/cli/">preact-cli</a> to create a
-          minimal, server-prerendered, offline-enabled build.
+          dependency. Built with{" "}
+          <a href="https://vitejs.dev/">Vite</a> for fast development and
+          optimized production builds.
         </p>
       </div>
     </label>
@@ -238,6 +244,7 @@ function Keyboard({ onInput, onSubmit, guesses, isDone, matrix }) {
     <div class="keyboard">
       {keys.map((key) => (
         <button
+          key={key}
           class={`key ${classByKey[key]}`}
           data-key={key}
           onClick={() => {
@@ -258,3 +265,5 @@ function Keyboard({ onInput, onSubmit, guesses, isDone, matrix }) {
     </div>
   );
 }
+
+render(<Game />, document.getElementById("app"));
