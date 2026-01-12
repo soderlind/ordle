@@ -1,29 +1,29 @@
 {
-  "private": true,
-  "name": "ordle",
-  "version": "0.0.0",
-  "type": "module",
-  "license": "MIT",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build && cp -rf ./build/. ../ordle.github.io",
-    "preview": "vite preview",
-    "lint": "eslint src --ext .js,.jsx"
-  },
-  "eslintConfig": {
-    "extends": "preact"
-  },
-  "eslintIgnore": [
-    "docs/*"
-  ],
-  "devDependencies": {
-    "@preact/preset-vite": "^2.9.4",
-    "eslint": "^8.57.1",
-    "eslint-config-preact": "^1.5.0",
-    "vite": "^6.3.5",
-    "vite-plugin-pwa": "^1.0.0"
-  },
-  "dependencies": {
-    "preact": "^10.28.2"
-  }
+	"private": true,
+	"name": "ordle",
+	"version": "0.0.0",
+	"type": "module",
+	"license": "MIT",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build && cp -rf ./build/. ../ordle.github.io",
+		"preview": "vite preview",
+		"lint": "eslint src --ext .js,.jsx"
+	},
+	"eslintConfig": {
+		"extends": "preact"
+	},
+	"eslintIgnore": [
+		"docs/*"
+	],
+	"devDependencies": {
+		"@preact/preset-vite": "^2.9.4",
+		"eslint": "^8.57.1",
+		"eslint-config-preact": "^1.5.0",
+		"vite": "^6.3.5",
+		"vite-plugin-pwa": "^1.0.0"
+	},
+	"dependencies": {
+		"preact": "^10.28.2"
+	}
 }
