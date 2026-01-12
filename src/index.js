@@ -149,9 +149,10 @@ ${matrix
         </a>
       </header>
       <form onSubmit={onSubmit} class="guesses">
-        {matrix.map(({ guess, states, isActive, isSubmitted }) =>
+        {matrix.map(({ guess, states, isActive, isSubmitted }, guessIndex) =>
           states.map((state, letterIndex) => (
             <div
+              key={`${guessIndex}-${letterIndex}`}
               class={`letter ${
                 isSubmitted
                   ? `submitted ${state}`
@@ -238,6 +239,7 @@ function Keyboard({ onInput, onSubmit, guesses, isDone, matrix }) {
     <div class="keyboard">
       {keys.map((key) => (
         <button
+          key={key}
           class={`key ${classByKey[key]}`}
           data-key={key}
           onClick={() => {
